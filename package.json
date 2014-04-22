@@ -1,0 +1,28 @@
+{
+  "name": "pagerun",
+  "version": "0.9.1",
+  "description": "WebPage runner",
+  "main": "lib/pagerun",
+  "dependencies": {
+    "pageProxy": "0.9.1",
+    "jwebdriver": "0.9.6",
+    "colors": "0.6.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yaniswang/pageRun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yaniswang/pageRun/issues"
+  },
+  "keywords": [
+    "pagerun",
+    "runner",
+    "webpage",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Yanis Wang",
+  "license": "MIT"
+}
