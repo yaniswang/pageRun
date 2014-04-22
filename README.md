@@ -146,15 +146,15 @@ All core plugins will loaded with pagerun task.
     
     The plugin is used for read and edit http request.
 
-2. [hosts](https://github.com/yaniswang/pageRun/wiki/pageproxy)
+2. [hosts](https://github.com/yaniswang/pageRun/wiki/hosts)
 
     The plugin is used for Change hosts.
 
-3. [webdriver](https://github.com/yaniswang/pageRun/wiki/pageproxy)
+3. [webdriver](https://github.com/yaniswang/pageRun/wiki/webdriver)
 
     Control webdriver to open target url.
 
-4. [bridge](https://github.com/yaniswang/pageRun/wiki/pageproxy)
+4. [bridge](https://github.com/yaniswang/pageRun/wiki/bridge)
 
     Set pagerun object to browser.
 
