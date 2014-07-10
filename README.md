@@ -60,7 +60,7 @@ Usage
 
 2. Run pagerun
 
-        var pagerun = require('pageun');
+        var pagerun = require('pagerun');
 
         pagerun.loadNpmPlugin('httperror');
         pagerun.loadNpmPlugin('jserror');
