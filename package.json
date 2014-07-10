@@ -1,10 +1,10 @@
 {
   "name": "pagerun",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "WebPage runner",
   "main": "lib/pagerun",
   "dependencies": {
-    "pageproxy": "0.9.1",
+    "pageproxy": "0.9.2",
     "jwebdriver": "0.9.6",
     "colors": "0.6.2"
   },

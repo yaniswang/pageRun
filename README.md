@@ -3,6 +3,8 @@ pageRun
 
 ![pageRun logo](https://raw.github.com/yaniswang/pageRun/master/img/logo.png)
 
+[![NPM version](https://badge.fury.io/js/pagerun.png)](http://badge.fury.io/js/pagerun)
+
 pageRun is a webpage runner, used for webpage analysis.
 
 It support a lot of plugins, you can also develop your own plugin upload to npm.
@@ -126,6 +128,13 @@ Set run mode:
     test: show logs
     debug: show logs and stop run after webdriver open url.
 
+pagerun.modulesRoot
+----------------------------
+
+Set default modules root, default: ./node_modules/
+
+This propertie can used for npm plugin develop.
+
 pagerun.run(callback)
 ----------------------------  
 
@@ -154,7 +163,11 @@ All core plugins will loaded with pagerun task.
 
     Control webdriver to open target url.
 
-4. [bridge](https://github.com/yaniswang/pageRun/wiki/bridge)
+4. [inject](https://github.com/yaniswang/pageRun/wiki/inject)
+
+    Inject code to webpage.
+
+5. [bridge](https://github.com/yaniswang/pageRun/wiki/bridge)
 
     Set pagerun object to browser.
 
