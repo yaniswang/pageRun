@@ -45,9 +45,10 @@ Install
 
 5. Install plugins from npm
 
+        npm install pagerun-httpsummary
         npm install pagerun-httperror
         npm install pagerun-jserror
-        npm install pagerun-domtime
+        npm install pagerun-pagesummary
         npm install pagerun-jsunit
         npm install pagerun-htmlhint
 
@@ -62,9 +63,10 @@ Usage
 
         var pagerun = require('pagerun');
 
+        pagerun.loadNpmPlugin('httpsummary');
         pagerun.loadNpmPlugin('httperror');
         pagerun.loadNpmPlugin('jserror');
-        pagerun.loadNpmPlugin('domtime');
+        pagerun.loadNpmPlugin('pagesummary');
         pagerun.loadNpmPlugin('jsunit');
         pagerun.loadNpmPlugin('htmlhint');
 
@@ -97,10 +99,10 @@ Usage
             }
         });
         pagerun.mode = 'test';
-        pagerun.run(function(runState, arrResults, arrLogs){
-            console.log(runState);
-            console.log(JSON.stringify(arrResults,null,4));
-            console.log(arrLogs);
+        pagerun.run(function(result){
+            console.log(result.success);
+            console.log(JSON.stringify(result.messages,null,4));
+            // console.log(result.logs);
             process.exit(0);
         });
 
@@ -112,7 +114,7 @@ pagerun.loadNpmPlugin(pluginName)
 
 Load plugin from npm.
 
-Npm plugin name must match: pagerun-xxx
+Npm plugin name must match: pagerun-xxx (pluginName == xxx)
 
 pagerun.setConfig(configs)
 ----------------------------  
@@ -140,11 +142,11 @@ pagerun.run(callback)
 
 Start pagerun task.
 
-The first argument is the task callback. It will set 3 arguments to the callback:
+The first argument is the task callback. It will set result object to the callback:
 
-1. runState: true(success), false(failed)
-2. arrResults: task results
-3. arrLogs: task logs
+1. result.success: true(success), false(failed)
+2. result.messages: task results
+3. result.logs: task logs
 
 Core plugins
 ==================
@@ -171,28 +173,28 @@ All core plugins will loaded with pagerun task.
 
     Set pagerun object to browser.
 
-    So you can use pagerun.result('jserror', {'text':'abc'}) in browser.
+    So you can use pagerun.error('jserror', {'text':'abc'}) in browser.
 
 Npm plugins
 ===================
 
 All npm plugins can loaded by pagerun.loadNpmPlugin api.
 
-1. [httperror](https://www.npmjs.org/package/pagerun-domtime)
+1. [httperror](https://www.npmjs.org/package/pagerun-httperror)
     
     Catch all http error such as:4xx, 5xx.
 
 2. [htmlhint](https://www.npmjs.org/package/pagerun-htmlhint)
     
-    Scan html content with HtmlHint.
+    Lint html content with HtmlHint.
 
 3. [httpresponse](https://www.npmjs.org/package/pagerun-httpresponse)
 
     Save all http response content, so you can analyze the http content after run.
 
-4. [domtime](https://www.npmjs.org/package/pagerun-domtime)
+4. [pagesummary](https://www.npmjs.org/package/pagerun-pagesummary)
 
-    Catch domready and onload times.
+    Get page summary in webpage, such as: dom time, dom count.
 
 5. [jserror](https://www.npmjs.org/package/pagerun-jserror)
 
