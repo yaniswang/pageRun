@@ -72,7 +72,6 @@ Usage
 
         pagerun.setConfig({
             pageproxy: {
-                gunzip: true,
                 keyPath: "./cert/"
             },
             webdriver: {
@@ -192,19 +191,23 @@ All npm plugins can loaded by pagerun.loadNpmPlugin api.
 
     Save all http response content, so you can analyze the http content after run.
 
-4. [pagesummary](https://www.npmjs.org/package/pagerun-pagesummary)
+4. [httpsummary](https://www.npmjs.org/package/pagerun-httpsummary)
+
+    Save http summary for pagerun.
+
+5. [pagesummary](https://www.npmjs.org/package/pagerun-pagesummary)
 
     Get page summary in webpage, such as: dom time, dom count.
 
-5. [jserror](https://www.npmjs.org/package/pagerun-jserror)
+6. [jserror](https://www.npmjs.org/package/pagerun-jserror)
 
     Catch onerror info.
 
-6. [jsunit](https://www.npmjs.org/package/pagerun-jsunit)
+7. [jsunit](https://www.npmjs.org/package/pagerun-jsunit)
 
     Catch js unit test result, supoort: [Mocha](http://visionmedia.github.io/mocha/), [Jasmine](http://jasmine.github.io/), [QUnit](https://qunitjs.com/), [YUI Test](http://yuilibrary.com/projects/yuitest/).
 
-7. [jscoverage](https://www.npmjs.org/package/pagerun-jscoverage)
+8. [jscoverage](https://www.npmjs.org/package/pagerun-jscoverage)
 
     Get coverage info after js run.
 

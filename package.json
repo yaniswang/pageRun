@@ -4,7 +4,7 @@
   "description": "WebPage runner",
   "main": "lib/pagerun",
   "dependencies": {
-    "pageproxy": "0.9.4",
+    "pageproxy": "0.9.5",
     "jwebdriver": "0.9.6",
     "colors": "0.6.2"
   },
