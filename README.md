@@ -27,11 +27,7 @@ Install
     
     [http://nodejs.org/](http://nodejs.org/)
 
-2. Install OpenSSL
-
-    [https://www.openssl.org/](https://www.openssl.org/)
-
-3. Download webdriver.
+2. Download webdriver.
 
     [http://code.google.com/p/selenium/downloads/list](http://code.google.com/p/selenium/downloads/list)
 
@@ -39,11 +35,11 @@ Install
 
     Tip: Add the directory to PATH, so you can use it.
 
-4. Install pagerun from npm
+3. Install pagerun from npm
 
         npm install pagerun
 
-5. Install plugins from npm
+4. Install plugins from npm
 
         npm install pagerun-httpsummary
         npm install pagerun-httperror
